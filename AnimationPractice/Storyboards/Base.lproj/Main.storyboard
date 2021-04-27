@@ -19,18 +19,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5i-az-wuW" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="67" y="117" width="241" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-ec-Ssw">
-                                        <rect key="frame" x="96.5" y="52" width="48" height="24"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-ec-Ssw">
+                                        <rect key="frame" x="0.0" y="0.0" width="241" height="128"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
+                                    <constraint firstItem="GrD-ec-Ssw" firstAttribute="top" secondItem="Q5i-az-wuW" secondAttribute="top" id="488-cO-bra"/>
                                     <constraint firstAttribute="height" constant="128" id="Czl-RG-t65"/>
-                                    <constraint firstItem="GrD-ec-Ssw" firstAttribute="centerY" secondItem="Q5i-az-wuW" secondAttribute="centerY" id="J2q-n8-xtb"/>
-                                    <constraint firstItem="GrD-ec-Ssw" firstAttribute="centerX" secondItem="Q5i-az-wuW" secondAttribute="centerX" id="mKJ-LH-sdQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GrD-ec-Ssw" secondAttribute="trailing" id="Oo3-wS-fsx"/>
+                                    <constraint firstAttribute="bottom" secondItem="GrD-ec-Ssw" secondAttribute="bottom" id="S6c-nv-bZw"/>
+                                    <constraint firstItem="GrD-ec-Ssw" firstAttribute="leading" secondItem="Q5i-az-wuW" secondAttribute="leading" id="dEx-IA-9aU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

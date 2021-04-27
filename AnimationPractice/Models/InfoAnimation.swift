@@ -11,6 +11,12 @@ struct InfoAnimation {
     let valueForce: Float
     let valueDuration: Float
     let valueDelay: Float
+    
+    var getInfo: String {
+        
+        "\(namesAnimation) \n \(nameCurve)"
+
+    }
 
     static func getInfoAnimation() -> [InfoAnimation] {
         

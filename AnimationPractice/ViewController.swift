@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoLabel.numberOfLines = 4
 
     }
     
@@ -33,6 +32,7 @@ class ViewController: UIViewController {
             animationView.duration = CGFloat(Float.random(in: 0.5...2.0))
             animationView.delay = CGFloat(Float.random(in: 0.5...2.0))
         animationView.animate()
+            infoLabel.text = " \(animationView.animation)\n \(animationView.curve)\n \(String(format: "%.2f", animationView.force))\n \((String(format: "%.2f",animationView.duration)))\n \((String(format: "%.2f",animationView.delay)))"
             
             
         }
