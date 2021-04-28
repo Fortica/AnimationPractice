@@ -15,26 +15,28 @@ class ViewController: UIViewController {
     
     var animations = InfoAnimation.getInfoAnimation()
     
-    private var animationStarted = false
-    
 
     @IBAction func runAnimationButton(_ sender: SpringButton) {
         
-        for animation in animations {
+        for animation in animations.shuffled() {
             
-            animationView.animation = animation.namesAnimation.randomElement()!
-            animationView.curve = animation.nameCurve.randomElement()!
+            for name in animation.nameAnimations.shuffled() {
+                animationView.animation = name
+                
+                sender.setTitle("\(animationView.animation)", for: .normal)
+            }
+            animationView.curve = animation.nameCurves.randomElement()!
             animationView.force = CGFloat(Float.random(in: 0.2...1.0))
-            animationView.duration = CGFloat(Float.random(in: 0.5...2.0))
+            animationView.duration = CGFloat(Float.random(in: 1.0...2.0))
             animationView.delay = CGFloat(Float.random(in: 0.2...0.5))
-        animationView.animate()
-            infoLabel.text = " \(animationView.animation)\n \(animationView.curve)\n \(String(format: "%.2f", animationView.force))\n \((String(format: "%.2f",animationView.duration)))\n \((String(format: "%.2f",animationView.delay)))"
-            
-            sender.setTitle("\(animationView.animation)", for: .normal)
+                
+            animationView.animate()
+                
+            infoLabel.text = "Preset: \(animationView.animation)\n Curve: \(animationView.curve)\n Force: \(String(format: "%.2f", animationView.force))\n Duration: \((String(format: "%.2f",animationView.duration)))\n Delay: \((String(format: "%.2f",animationView.delay)))"
             
         }
-    
     }
+    
 
 }
 
